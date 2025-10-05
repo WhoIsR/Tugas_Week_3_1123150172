@@ -19,13 +19,3 @@ class Mahasiswa {
     print("Angkatan : $angkatan");
   }
 }
-
-void main() {
-  Mahasiswa mhs = Mahasiswa(
-    nama: "John Doe",
-    nim: "123456",
-    jurusan: "Teknik Informatika",
-    angkatan: 2023,
-  );
-  mhs.tampilkanData();
-}
