@@ -1,25 +1,39 @@
-// Class induk untuk merepresentasikan data mahasiswa
 class Mahasiswa {
-  // Properties (atribut) mahasiswa
+  // Properties (atribut)
   String nama;
   String nim;
   String jurusan;
   int angkatan;
-
-  // Constructor untuk membuat objek mahasiswa
+  // Constructor
   Mahasiswa({
     required this.nama,
     required this.nim,
     required this.jurusan,
     required this.angkatan,
   });
-
-  // Method untuk menampilkan data mahasiswa
+  // Method
   void tampilkanData() {
-    print("Nama     : $nama");
-    print("NIM      : $nim");
-    print("Jurusan  : $jurusan");
+    print("Nama : $nama");
+    print("NIM : $nim");
+    print("Jurusan : $jurusan");
     print("Angkatan : $angkatan");
+  }
+}
+
+class AsistenDosen extends Mahasiswa {
+  String mataKuliah;
+  AsistenDosen({
+    required String nama,
+    required String nim,
+    required String jurusan,
+    required int angkatan,
+    required this.mataKuliah,
+  }) : super(nama: nama, nim: nim, jurusan: jurusan, angkatan: angkatan);
+  // Override method
+  @override
+  void tampilkanData() {
+    super.tampilkanData();
+    print("Asisten MK: $mataKuliah");
   }
 }
 
@@ -98,8 +112,8 @@ void main() {
 
   // Membuat objek asisten dosen
   var asdos = AsistenDosen(
-    nama: "Radja Satrio Seftiano",
-    nim: "1123150172",
+    nama: "Farhan Rasisprawira Hartama",
+    nim: "1123150117",
     jurusan: "Teknik Informatika",
     angkatan: 2023,
     mataKuliah: "Mobile Apps",
@@ -121,5 +135,15 @@ void main() {
 
   // Menampilkan data mahasiswa aktif
   print("=== Data Mahasiswa Aktif ===");
+  mhsAktif.tampilkanData();
+
+  print("\n--- Proses Pendaftaran Mata Kuliah ---");
+  // Mendaftarkan mata kuliah
+  mhsAktif.daftarMatkul("Algoritma dan Pemrograman");
+  mhsAktif.daftarMatkul("Basis Data");
+  mhsAktif.daftarMatkul("Jaringan Komputer");
+
+  print("\n--- Data Setelah Pendaftaran ---");
+  // Menampilkan data setelah pendaftaran
   mhsAktif.tampilkanData();
 }

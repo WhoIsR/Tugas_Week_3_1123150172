@@ -98,8 +98,8 @@ void main() {
 
   // Membuat objek asisten dosen
   var asdos = AsistenDosen(
-    nama: "Radja Satrio Seftiano",
-    nim: "1123150172",
+    nama: "Farhan Rasisprawira Hartama",
+    nim: "1123150117",
     jurusan: "Teknik Informatika",
     angkatan: 2023,
     mataKuliah: "Mobile Apps",
@@ -121,5 +121,15 @@ void main() {
 
   // Menampilkan data mahasiswa aktif
   print("=== Data Mahasiswa Aktif ===");
+  mhsAktif.tampilkanData();
+
+  print("\n--- Proses Pendaftaran Mata Kuliah ---");
+  // Mendaftarkan mata kuliah
+  mhsAktif.daftarMatkul("Algoritma dan Pemrograman");
+  mhsAktif.daftarMatkul("Basis Data");
+  mhsAktif.daftarMatkul("Jaringan Komputer");
+
+  print("\n--- Data Setelah Pendaftaran ---");
+  // Menampilkan data setelah pendaftaran
   mhsAktif.tampilkanData();
 }

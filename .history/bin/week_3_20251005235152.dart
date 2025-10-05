@@ -122,4 +122,14 @@ void main() {
   // Menampilkan data mahasiswa aktif
   print("=== Data Mahasiswa Aktif ===");
   mhsAktif.tampilkanData();
+
+  print("\n--- Proses Pendaftaran Mata Kuliah ---");
+  // Mendaftarkan mata kuliah
+  mhsAktif.daftarMatkul("Algoritma dan Pemrograman");
+  mhsAktif.daftarMatkul("Basis Data");
+  mhsAktif.daftarMatkul("Jaringan Komputer");
+
+  print("\n--- Data Setelah Pendaftaran ---");
+  // Menampilkan data setelah pendaftaran
+  mhsAktif.tampilkanData();
 }
